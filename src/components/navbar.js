@@ -134,6 +134,11 @@ function NavBar(props) {
                                         Create Items
                                     </Link>
                                 </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <Link to="/create-category">
+                                        Create Categories
+                                    </Link>
+                                </NavDropdown.Item>
 
                             </NavDropdown>
                         </Nav.Link>

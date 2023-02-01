@@ -10,6 +10,7 @@ import CreatePackage from './pages/createPackage';
 import Items from './pages/items';
 import Packages from './pages/packages';
 import Customers from './pages/customer';
+import CreateCategory from './pages/createCategory';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/create-product" element={<CreateProduct />} />
           <Route path="/create-package" element={<CreatePackage />} />
+          <Route path="/create-category" element={<CreateCategory />} />
           <Route path="/items" element={<Items />} />
           <Route path="/packages" element={<Packages />} />
           <Route path="/customers" element={<Customers />} />
