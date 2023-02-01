@@ -42,7 +42,7 @@ function Customers() {
             <div className="cen">
                 <div className="row py-3">
                     <div className="col-md-3">
-                        <NavBar class3="activeBar" color3="white" />
+                        <NavBar class1="activeBar" color1="white" />
                     </div>
                     <div className="col-md-9">
                         <p style={{ fontWeight: "700" }}>Product &#62; All Items</p>
