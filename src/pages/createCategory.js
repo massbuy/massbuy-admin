@@ -48,7 +48,7 @@ function CreateCategory() {
             }, 2000);
             return;
         }
-        let url = mainUrl + "/package";
+        let url = mainUrl + "/category";
         let data = { createdBy, title };
         const response = await fetch(url, {
             headers: {
