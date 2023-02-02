@@ -75,7 +75,7 @@ function Packages() {
                                                     }
                                                     return <tr>
                                                         <td><input type="chechbox" style={{ width: "10px", height: "10px" }} /></td>
-                                                        <td style={{ width: "180px" }}>{e.itemName}</td>
+                                                        <td style={{ width: "180px" }}>{e.title}</td>
                                                         <td>{e.price}</td>
                                                         <td>Category</td>
                                                         <td>{date.toLocaleDateString()}</td>
