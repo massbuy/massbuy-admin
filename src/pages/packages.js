@@ -94,7 +94,7 @@ function Packages() {
                                                             </ol>
                                                         </td>
                                                         <td>
-                                                            <p>{total}</p>
+                                                            <p>{Number(total).toLocaleString()}</p>
                                                         </td>
                                                         <td>{e.category.title}</td>
                                                         <td>{date.toLocaleDateString()}</td>
