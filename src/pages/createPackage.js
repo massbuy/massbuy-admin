@@ -22,6 +22,7 @@ function CreatePackage() {
     let [categorys, setCategorys] = useState([]);
     let [category, setCategory] = useState("");
     let [products, setProducts] = useState([]);
+    let [productArray, setProductArray] = useState([]);
     let [show, setShow] = useState(false);
     let [success, setSuccess] = useState("");
     // let [, set] = useState("");
@@ -53,10 +54,10 @@ function CreatePackage() {
 
     let createPackage = async () => {
         // if (name.typeOf == undefined) return (alert("empty field"))
-        let product_id = product_ids.map((e, i) => {
+        let product_id = productArray.map((e, i) => {
             return { item: e }
         })
-        window.scrollTo(0, 0);
+        await window.scrollTo(0, 0)
         if (product_id.length < 2) {
             setShow(true);
             setSuccess("Select 2 or more products.")
@@ -98,6 +99,7 @@ function CreatePackage() {
             }, 2000);
             setCategory("")
             setProductIds([])
+            setProductArray([])
         } else {
             setCategory("")
             setShow(true);
@@ -106,6 +108,17 @@ function CreatePackage() {
                 setShow(false)
                 clearTimeout(t1);
             }, 2000)
+        }
+    };
+
+    let check = (e) => {
+        if (productArray.includes(e)) {
+            let index = productArray.indexOf(e)
+            productArray.splice(index, 1)
+            return productArray
+        } else {
+            productArray.push(e)
+            return productArray;
         }
     };
 
@@ -136,12 +149,18 @@ function CreatePackage() {
                                     </section>
 
                                     <section>
-                                        <select onChange={(e) => setProductIds(Array.from(e.target.selectedOptions, Option => Option.value))} multiple required>
-                                            {products.map((e, i) => {
-                                                return <option key={e._id} value={e._id} >{e.itemName}</option>
-                                            })}
-                                        </select>
+                                        <br />
+                                        <label>Choose at Least 2 or More Items to Create a Package</label>
+                                        <br /><br />
 
+                                        <div className="packageSelectContainer">
+                                            {products.map((e, i) => {
+                                                return <div className="packageSelect flex">
+                                                    <input type={"checkbox"} id={i} value={e._id} onClick={() => check(e._id)} />
+                                                    <label for={i}>{e.itemName}</label>
+                                                </div>
+                                            })}
+                                        </div>
                                     </section>
 
 
