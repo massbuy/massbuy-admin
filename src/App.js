@@ -11,6 +11,7 @@ import Items from './pages/items';
 import Packages from './pages/packages';
 import Customers from './pages/customer';
 import CreateCategory from './pages/createCategory';
+import Packagess from './pages/packages_';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/create-category" element={<CreateCategory />} />
           <Route path="/items" element={<Items />} />
           <Route path="/packages" element={<Packages />} />
+          <Route path="/packages_" element={<Packagess />} />
           <Route path="/customers" element={<Customers />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -1,20 +1,16 @@
 import React, { useEffect, useContext } from "react";
 import NavBar from "../components/navbar";
 import { Icon } from '@iconify/react';
-import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
 import Footer from "../components/footer";
 import GoToTop from "../components/goToTop";
 import { Store } from "../context/store";
-import { Link } from "react-router-dom";
-import { PieChart } from 'react-minimal-pie-chart';
-import { ProgressBar, Table } from "react-bootstrap";
 import { useState } from "react";
 import Form from 'react-bootstrap/Form';
+import { Table } from "react-bootstrap";
 
-function Packages() {
+function Packagess() {
     let store = useContext(Store);
     let [mainUrl] = store.endUrl;
     let [user, setUser] = store.userinfo;
@@ -42,7 +38,7 @@ function Packages() {
             <div className="cen">
                 <div className="row py-3">
                     <div className="col-md-3">
-                        <NavBar class3="activeBar" color3="white" />
+                        <NavBar class4="activeBar" color4="white" />
                     </div>
                     <div className="col-md-9">
                         <p style={{ fontWeight: "700" }}>Product &#62; All Packages</p>
@@ -126,4 +122,4 @@ function Packages() {
     </>
 }
 
-export default Packages
+export default Packagess

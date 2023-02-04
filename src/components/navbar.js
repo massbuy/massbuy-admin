@@ -166,7 +166,7 @@ function NavBar(props) {
                         </Nav.Link>
 
                         <Nav.Link id={props.class4}>
-                            <Link to='/register' style={{ display: "flex", color: props.color4 }}>
+                            <Link to='/packages_' style={{ display: "flex", color: props.color4 }}>
                                 <Icon icon="teenyicons:bag-minus-outline" width="24" height="24" className="me-3" />
                                 <p>Packages</p>
                             </Link>
