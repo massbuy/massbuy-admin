@@ -176,3 +176,13 @@ body a:hover {
 .packageSelect label {
   text-transform: capitalize;
 }
+
+
+
+@media (max-width:425px) {
+  .tableData {
+    overflow-x: scroll;
+    width: 400px;
+    /* background-color: whitesmoke; */
+  }
+}

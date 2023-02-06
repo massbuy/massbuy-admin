@@ -49,9 +49,9 @@ function Items() {
 
                         <Row className="mt-3" >
                             <Col>
-                                <div>
+                                <div className="tableData">
                                     <Table>
-                                        <thead>
+                                        <thead style={{ background: "#fcefe8" }}>
                                             <tr>
                                                 <th></th>
                                                 <th>Product Details</th>
@@ -63,7 +63,7 @@ function Items() {
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody style={{ background: "#fff" }}>
                                             {
                                                 products.map((e, i) => {
                                                     let date = new Date(e.createdAt);
@@ -76,8 +76,8 @@ function Items() {
                                                     return <tr>
                                                         <td><input type="chechbox" style={{ width: "10px", height: "10px" }} /></td>
                                                         <td style={{ width: "180px" }}>{e.itemName}</td>
-                                                        <td>{e.price}</td>
-                                                        <td>Category</td>
+                                                        <td>&#8358; {e.price}</td>
+                                                        <td>{e.category_id?.title}</td>
                                                         <td>{date.toLocaleDateString()}</td>
                                                         <td>
                                                             <Form.Check
