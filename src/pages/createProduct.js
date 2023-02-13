@@ -104,7 +104,7 @@ function CreateProduct() {
             method: "POST",
             body: JSON.stringify(data)
         });
-        console.log(response)
+       
         if (response.status === 200) {
             await response.json()
             setShow(true);
